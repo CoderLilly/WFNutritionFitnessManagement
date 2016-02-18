@@ -127,6 +127,9 @@
   <data name="PastelCloudButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PastelCloudButton.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="SearchRecipesBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SearchRecipesBtn.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="KitchenTimerbutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\KitchenTimerbutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,11 +154,11 @@
   <data name="AddIngredientsBtn1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AddIngredientsBtn1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LargeCancelBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LargeCancelBtn.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="PastelCloudGif" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PastelCloudGif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EarthTonesgradientbuttonWithBorderShadowDepressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EarthTonesgradientbuttonWithBorderShadowDepressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1200x600pastelGradient" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1200x600pastelGradient.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,11 +169,11 @@
   <data name="CalorieBurnButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CalorieBurnButton.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="StopwatchBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StopwatchBtn.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="AddIngredientsBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AddIngredientsBtn.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AddButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AddButton.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PastelCloudButton1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PastelCloudButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,8 +190,8 @@
   <data name="UnitConverterBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UnitConverterBtn.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1200x600EarthToneslGradient" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1200x600EarthToneslGradient.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ContinueGuestBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ContinueGuestBtn.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="EarthToneRectButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EarthToneRectButton.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,11 +199,11 @@
   <data name="CancelButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CancelButton.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="EarthTonesgradientbuttonWithBorderShadowDepressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EarthTonesgradientbuttonWithBorderShadowDepressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LargeCancelBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeCancelBtn.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SearchRecipesBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SearchRecipesBtn.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1200x600EarthToneslGradient" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1200x600EarthToneslGradient.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Stopwatchbutton1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Stopwatchbutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,16 +211,22 @@
   <data name="AddUserBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AddUserBtn.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="AddActivitySmallBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddActivitySmallBtn.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AddFoodSmallBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddFoodSmallBtn.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="1200x600pastelGradient2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1200x600pastelGradient2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="StopwatchBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\StopwatchBtn.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AddButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddButton.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1449714454_Hourglass" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1449714454_Hourglass.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ContinueGuestBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ContinueGuestBtn.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SaveSmallBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SaveSmallBtn.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

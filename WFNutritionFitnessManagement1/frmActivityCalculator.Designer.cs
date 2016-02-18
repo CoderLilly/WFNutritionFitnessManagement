@@ -42,6 +42,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.btnSearchActivity = new System.Windows.Forms.Button();
             this.tbSearchActivity = new System.Windows.Forms.TextBox();
+            this.btnAddActivity = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstBoxPrimary
@@ -296,13 +297,25 @@
             this.tbSearchActivity.TabIndex = 6;
             this.tbSearchActivity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSearchActivity_KeyPress);
             // 
+            // btnAddActivity
+            // 
+            this.btnAddActivity.Enabled = false;
+            this.btnAddActivity.Location = new System.Drawing.Point(553, 267);
+            this.btnAddActivity.Name = "btnAddActivity";
+            this.btnAddActivity.Size = new System.Drawing.Size(150, 23);
+            this.btnAddActivity.TabIndex = 19;
+            this.btnAddActivity.Text = "Add to Daily Management";
+            this.btnAddActivity.UseVisualStyleBackColor = true;
+            this.btnAddActivity.Click += new System.EventHandler(this.btnAddActivity_Click);
+            // 
             // frmActivityCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::WFNutritionFitnessManagement1.Properties.Resources._1200x600EarthToneslGradient;
-            this.ClientSize = new System.Drawing.Size(715, 287);
+            this.ClientSize = new System.Drawing.Size(715, 299);
+            this.Controls.Add(this.btnAddActivity);
             this.Controls.Add(this.tbSearchActivity);
             this.Controls.Add(this.btnSearchActivity);
             this.Controls.Add(this.label9);
@@ -341,5 +354,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnSearchActivity;
         private System.Windows.Forms.TextBox tbSearchActivity;
+        private System.Windows.Forms.Button btnAddActivity;
     }
 }

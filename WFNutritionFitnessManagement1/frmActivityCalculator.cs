@@ -71,7 +71,8 @@ namespace WFNutritionFitnessManagement1
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            calculate();          
+            calculate();
+            btnAddActivity.Enabled = true;      
 
         }
 
@@ -139,6 +140,35 @@ namespace WFNutritionFitnessManagement1
 
             lblCaloriesBurned.Text = string.Format("{0:N2}", caloriesBurned);
             //MessageBox.Show(personalMET.ToString());
+        }
+
+        private string selectedActivity;
+        public string passedActivity
+        {
+            get { return selectedActivity; }
+            set { selectedActivity = value; }
+        }
+
+        private double calculatedCalories;
+        public double passedCalories
+        {
+            get { return calculatedCalories; }
+            set { calculatedCalories = value; }
+        }
+
+        private void btnAddActivity_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                
+                passedActivity = lstBoxActivity.Text;
+                passedCalories = double.Parse(lblCaloriesBurned.Text);
+                this.Hide();
+            }
+            catch(Exception g)
+            { MessageBox.Show(g.ToString()); }   
+
         }
     }
 

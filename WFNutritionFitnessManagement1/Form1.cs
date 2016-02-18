@@ -248,7 +248,12 @@ namespace WFNutritionFitnessManagement1
 
         private void btnSearchActivity_Click(object sender, EventArgs e)
         {
-            
+            frmActivityCalculator burnCalculator = new frmActivityCalculator();
+
+            burnCalculator.ShowDialog();
+
+            txtActivity.Text = burnCalculator.passedActivity;
+            txtCalBurn.Text = string.Format("{0:N2}", burnCalculator.passedCalories);
         
         }
     }

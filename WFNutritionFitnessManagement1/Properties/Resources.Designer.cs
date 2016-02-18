@@ -103,9 +103,29 @@ namespace WFNutritionFitnessManagement1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AddActivitySmallBtn {
+            get {
+                object obj = ResourceManager.GetObject("AddActivitySmallBtn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap AddButton {
             get {
                 object obj = ResourceManager.GetObject("AddButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap AddFoodSmallBtn {
+            get {
+                object obj = ResourceManager.GetObject("AddFoodSmallBtn", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -315,6 +335,16 @@ namespace WFNutritionFitnessManagement1.Properties {
         internal static System.Drawing.Bitmap ResetButton {
             get {
                 object obj = ResourceManager.GetObject("ResetButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SaveSmallBtn {
+            get {
+                object obj = ResourceManager.GetObject("SaveSmallBtn", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

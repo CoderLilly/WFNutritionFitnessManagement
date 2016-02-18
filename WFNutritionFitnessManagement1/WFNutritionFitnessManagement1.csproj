@@ -299,6 +299,9 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <Content Include="PinkHeart.ico" />
+    <None Include="Resources\SaveSmallBtn.gif" />
+    <None Include="Resources\AddActivitySmallBtn.gif" />
+    <None Include="Resources\AddFoodSmallBtn.gif" />
     <None Include="Resources\ContinueGuestBtn.gif" />
     <None Include="Resources\LargeCancelBtn.gif" />
     <None Include="Resources\SearchButton.gif" />

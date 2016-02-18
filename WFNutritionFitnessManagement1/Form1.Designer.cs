@@ -117,6 +117,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.pnlDaily = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.txtCalBurn = new System.Windows.Forms.TextBox();
             this.txtCalIntake = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -140,8 +142,6 @@
             this.txtCurentUser = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.nutritionFitnessEntitiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.mnuMain.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -1035,16 +1035,34 @@
             this.pnlDaily.Size = new System.Drawing.Size(510, 499);
             this.pnlDaily.TabIndex = 35;
             // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(303, 93);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(67, 13);
+            this.label24.TabIndex = 35;
+            this.label24.Text = "Calories Out:";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(309, 68);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(59, 13);
+            this.label23.TabIndex = 34;
+            this.label23.Text = "Calories In:";
+            // 
             // txtCalBurn
             // 
-            this.txtCalBurn.Location = new System.Drawing.Point(321, 90);
+            this.txtCalBurn.Location = new System.Drawing.Point(369, 90);
             this.txtCalBurn.Name = "txtCalBurn";
             this.txtCalBurn.Size = new System.Drawing.Size(48, 20);
             this.txtCalBurn.TabIndex = 6;
             // 
             // txtCalIntake
             // 
-            this.txtCalIntake.Location = new System.Drawing.Point(321, 65);
+            this.txtCalIntake.Location = new System.Drawing.Point(369, 65);
             this.txtCalIntake.Name = "txtCalIntake";
             this.txtCalIntake.Size = new System.Drawing.Size(48, 20);
             this.txtCalIntake.TabIndex = 3;
@@ -1073,7 +1091,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(172, 10);
+            this.label15.Location = new System.Drawing.Point(172, 9);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(181, 22);
             this.label15.TabIndex = 30;
@@ -1081,44 +1099,55 @@
             // 
             // btnAddToDaily
             // 
-            this.btnAddToDaily.Location = new System.Drawing.Point(411, 146);
+            this.btnAddToDaily.BackgroundImage = global::WFNutritionFitnessManagement1.Properties.Resources.SaveSmallBtn;
+            this.btnAddToDaily.FlatAppearance.BorderSize = 0;
+            this.btnAddToDaily.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAddToDaily.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddToDaily.Location = new System.Drawing.Point(423, 146);
             this.btnAddToDaily.Name = "btnAddToDaily";
-            this.btnAddToDaily.Size = new System.Drawing.Size(75, 23);
+            this.btnAddToDaily.Size = new System.Drawing.Size(68, 23);
             this.btnAddToDaily.TabIndex = 11;
-            this.btnAddToDaily.Text = "Add Data";
             this.btnAddToDaily.UseVisualStyleBackColor = true;
             this.btnAddToDaily.Click += new System.EventHandler(this.btnAddToDaily_Click);
             // 
             // btnSearchActivity
             // 
-            this.btnSearchActivity.Location = new System.Drawing.Point(376, 88);
+            this.btnSearchActivity.BackgroundImage = global::WFNutritionFitnessManagement1.Properties.Resources.AddActivitySmallBtn;
+            this.btnSearchActivity.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearchActivity.FlatAppearance.BorderSize = 0;
+            this.btnSearchActivity.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSearchActivity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchActivity.Location = new System.Drawing.Point(423, 90);
             this.btnSearchActivity.Name = "btnSearchActivity";
-            this.btnSearchActivity.Size = new System.Drawing.Size(115, 23);
+            this.btnSearchActivity.Size = new System.Drawing.Size(68, 23);
             this.btnSearchActivity.TabIndex = 7;
-            this.btnSearchActivity.Text = "Find Activity";
             this.btnSearchActivity.UseVisualStyleBackColor = true;
             this.btnSearchActivity.Click += new System.EventHandler(this.btnSearchActivity_Click);
             // 
             // btnSearchFood
             // 
-            this.btnSearchFood.Location = new System.Drawing.Point(376, 65);
+            this.btnSearchFood.BackgroundImage = global::WFNutritionFitnessManagement1.Properties.Resources.AddFoodSmallBtn;
+            this.btnSearchFood.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearchFood.FlatAppearance.BorderSize = 0;
+            this.btnSearchFood.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSearchFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchFood.Location = new System.Drawing.Point(423, 63);
             this.btnSearchFood.Name = "btnSearchFood";
-            this.btnSearchFood.Size = new System.Drawing.Size(115, 23);
+            this.btnSearchFood.Size = new System.Drawing.Size(68, 23);
             this.btnSearchFood.TabIndex = 4;
-            this.btnSearchFood.Text = "Find Food";
             this.btnSearchFood.UseVisualStyleBackColor = true;
             this.btnSearchFood.Click += new System.EventHandler(this.button4_Click);
             // 
             // txtBG
             // 
-            this.txtBG.Location = new System.Drawing.Point(408, 120);
+            this.txtBG.Location = new System.Drawing.Point(413, 119);
             this.txtBG.Name = "txtBG";
             this.txtBG.Size = new System.Drawing.Size(78, 20);
             this.txtBG.TabIndex = 10;
             // 
             // txtHR
             // 
-            this.txtHR.Location = new System.Drawing.Point(264, 120);
+            this.txtHR.Location = new System.Drawing.Point(269, 120);
             this.txtHR.Name = "txtHR";
             this.txtHR.Size = new System.Drawing.Size(61, 20);
             this.txtHR.TabIndex = 9;
@@ -1133,7 +1162,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(334, 123);
+            this.label22.Location = new System.Drawing.Point(339, 123);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(68, 13);
             this.label22.TabIndex = 9;
@@ -1142,7 +1171,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(164, 123);
+            this.label21.Location = new System.Drawing.Point(169, 123);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(101, 13);
             this.label21.TabIndex = 7;
@@ -1160,7 +1189,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(240, 44);
+            this.label19.Location = new System.Drawing.Point(240, 43);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(33, 13);
             this.label19.TabIndex = 7;
@@ -1170,7 +1199,7 @@
             // 
             this.txtActivity.Location = new System.Drawing.Point(59, 91);
             this.txtActivity.Name = "txtActivity";
-            this.txtActivity.Size = new System.Drawing.Size(214, 20);
+            this.txtActivity.Size = new System.Drawing.Size(238, 20);
             this.txtActivity.TabIndex = 5;
             // 
             // label18
@@ -1186,7 +1215,7 @@
             // 
             this.txtFood.Location = new System.Drawing.Point(59, 65);
             this.txtFood.Name = "txtFood";
-            this.txtFood.Size = new System.Drawing.Size(214, 20);
+            this.txtFood.Size = new System.Drawing.Size(238, 20);
             this.txtFood.TabIndex = 2;
             // 
             // label17
@@ -1200,7 +1229,7 @@
             // 
             // dtpDailyMangement
             // 
-            this.dtpDailyMangement.Location = new System.Drawing.Point(291, 41);
+            this.dtpDailyMangement.Location = new System.Drawing.Point(291, 40);
             this.dtpDailyMangement.Name = "dtpDailyMangement";
             this.dtpDailyMangement.Size = new System.Drawing.Size(200, 20);
             this.dtpDailyMangement.TabIndex = 1;
@@ -1208,7 +1237,7 @@
             // txtCurentUser
             // 
             this.txtCurentUser.Enabled = false;
-            this.txtCurentUser.Location = new System.Drawing.Point(59, 41);
+            this.txtCurentUser.Location = new System.Drawing.Point(59, 40);
             this.txtCurentUser.Name = "txtCurentUser";
             this.txtCurentUser.Size = new System.Drawing.Size(175, 20);
             this.txtCurentUser.TabIndex = 0;
@@ -1216,7 +1245,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(12, 44);
+            this.label16.Location = new System.Drawing.Point(12, 43);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(32, 13);
             this.label16.TabIndex = 0;
@@ -1225,24 +1254,6 @@
             // nutritionFitnessEntitiesBindingSource
             // 
             this.nutritionFitnessEntitiesBindingSource.DataSource = typeof(WFNutritionFitnessManagement1.NutritionFitnessEntities);
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(275, 68);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(37, 13);
-            this.label23.TabIndex = 34;
-            this.label23.Text = "Cal In:";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(275, 93);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(45, 13);
-            this.label24.TabIndex = 35;
-            this.label24.Text = "Cal Out:";
             // 
             // frmMain
             // 
