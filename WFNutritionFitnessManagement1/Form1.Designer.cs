@@ -117,6 +117,9 @@
             this.label14 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.pnlDaily = new System.Windows.Forms.Panel();
+            this.txtCalBurn = new System.Windows.Forms.TextBox();
+            this.txtCalIntake = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblGuestMessage = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.btnAddToDaily = new System.Windows.Forms.Button();
@@ -136,10 +139,9 @@
             this.dtpDailyMangement = new System.Windows.Forms.DateTimePicker();
             this.txtCurentUser = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtCalIntake = new System.Windows.Forms.TextBox();
-            this.txtCalBurn = new System.Windows.Forms.TextBox();
             this.nutritionFitnessEntitiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.mnuMain.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -1004,6 +1006,8 @@
             // 
             this.pnlDaily.BackColor = System.Drawing.Color.Transparent;
             this.pnlDaily.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlDaily.Controls.Add(this.label24);
+            this.pnlDaily.Controls.Add(this.label23);
             this.pnlDaily.Controls.Add(this.txtCalBurn);
             this.pnlDaily.Controls.Add(this.txtCalIntake);
             this.pnlDaily.Controls.Add(this.dataGridView1);
@@ -1030,6 +1034,28 @@
             this.pnlDaily.Name = "pnlDaily";
             this.pnlDaily.Size = new System.Drawing.Size(510, 499);
             this.pnlDaily.TabIndex = 35;
+            // 
+            // txtCalBurn
+            // 
+            this.txtCalBurn.Location = new System.Drawing.Point(321, 90);
+            this.txtCalBurn.Name = "txtCalBurn";
+            this.txtCalBurn.Size = new System.Drawing.Size(48, 20);
+            this.txtCalBurn.TabIndex = 6;
+            // 
+            // txtCalIntake
+            // 
+            this.txtCalIntake.Location = new System.Drawing.Point(321, 65);
+            this.txtCalIntake.Name = "txtCalIntake";
+            this.txtCalIntake.Size = new System.Drawing.Size(48, 20);
+            this.txtCalIntake.TabIndex = 3;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 175);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(502, 319);
+            this.dataGridView1.TabIndex = 33;
             // 
             // lblGuestMessage
             // 
@@ -1144,7 +1170,7 @@
             // 
             this.txtActivity.Location = new System.Drawing.Point(59, 91);
             this.txtActivity.Name = "txtActivity";
-            this.txtActivity.Size = new System.Drawing.Size(231, 20);
+            this.txtActivity.Size = new System.Drawing.Size(214, 20);
             this.txtActivity.TabIndex = 5;
             // 
             // label18
@@ -1160,7 +1186,7 @@
             // 
             this.txtFood.Location = new System.Drawing.Point(59, 65);
             this.txtFood.Name = "txtFood";
-            this.txtFood.Size = new System.Drawing.Size(231, 20);
+            this.txtFood.Size = new System.Drawing.Size(214, 20);
             this.txtFood.TabIndex = 2;
             // 
             // label17
@@ -1196,31 +1222,27 @@
             this.label16.TabIndex = 0;
             this.label16.Text = "User:";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 175);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(502, 319);
-            this.dataGridView1.TabIndex = 33;
-            // 
-            // txtCalIntake
-            // 
-            this.txtCalIntake.Location = new System.Drawing.Point(296, 65);
-            this.txtCalIntake.Name = "txtCalIntake";
-            this.txtCalIntake.Size = new System.Drawing.Size(73, 20);
-            this.txtCalIntake.TabIndex = 3;
-            // 
-            // txtCalBurn
-            // 
-            this.txtCalBurn.Location = new System.Drawing.Point(296, 90);
-            this.txtCalBurn.Name = "txtCalBurn";
-            this.txtCalBurn.Size = new System.Drawing.Size(73, 20);
-            this.txtCalBurn.TabIndex = 6;
-            // 
             // nutritionFitnessEntitiesBindingSource
             // 
             this.nutritionFitnessEntitiesBindingSource.DataSource = typeof(WFNutritionFitnessManagement1.NutritionFitnessEntities);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(275, 68);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(37, 13);
+            this.label23.TabIndex = 34;
+            this.label23.Text = "Cal In:";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(275, 93);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(45, 13);
+            this.label24.TabIndex = 35;
+            this.label24.Text = "Cal Out:";
             // 
             // frmMain
             // 
@@ -1374,6 +1396,8 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtCalBurn;
         private System.Windows.Forms.TextBox txtCalIntake;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
     }
 }
 
