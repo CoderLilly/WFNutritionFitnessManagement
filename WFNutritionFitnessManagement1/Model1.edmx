@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="NutritionFitnessModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Activities">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MajorCategory" Type="nvarchar" MaxLength="150" />
+          <Property Name="GeneralCategory" Type="nvarchar" MaxLength="150" />
+          <Property Name="SpecificActivity" Type="nvarchar" MaxLength="150" />
+          <Property Name="MET" Type="decimal" Precision="15" Scale="2" />
+        </EntityType>
+        <EntityType Name="Daily">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="User" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SelectedActivity" Type="nvarchar" MaxLength="50" />
+          <Property Name="CalorieBurn" Type="decimal" Precision="8" Scale="2" />
+          <Property Name="Food" Type="nvarchar" MaxLength="50" />
+          <Property Name="CalorieIntake" Type="decimal" Precision="8" Scale="2" />
+          <Property Name="BloodPressure" Type="nvarchar" MaxLength="10" />
+          <Property Name="RestingHR" Type="int" />
+          <Property Name="BloodSugar" Type="int" />
+          <Property Name="SelectedDateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Ingredients">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="ServingSize" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="ServingType" Type="nvarchar" MaxLength="50" />
+          <Property Name="Calories" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="CaloriesFromFat" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="TotalFat" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="SatFat" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="PolyUnSatFat" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="MonoUnSatFat" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="Sodium" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="Cholesterol" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="Potassium" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="Carbohydrates" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="DietaryFiber" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="Sugar" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="Protein" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="VitaminA" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="VitaminC" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="Calcium" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="Iron" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="VitaminD" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="VitaminB6" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="VitaminB12" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="Magnesium" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="GlutenFree" Type="bit" Nullable="false" />
+          <Property Name="NightshadeFree" Type="bit" Nullable="false" />
+          <Property Name="PeanutFree" Type="bit" Nullable="false" />
+          <Property Name="TreeNutFree" Type="bit" Nullable="false" />
+          <Property Name="DairyFree" Type="bit" Nullable="false" />
+          <Property Name="EggFree" Type="bit" Nullable="false" />
+          <Property Name="SoyFree" Type="bit" Nullable="false" />
+          <Property Name="Vegetarian" Type="bit" Nullable="false" />
+          <Property Name="Vegan" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MET">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MajorCategory" Type="nvarchar" MaxLength="150" />
+          <Property Name="GeneralCategory" Type="nvarchar" MaxLength="150" />
+          <Property Name="SpecificActivity" Type="nvarchar" MaxLength="150" />
+          <Property Name="MET" Type="decimal" Precision="15" Scale="2" />
+        </EntityType>
+        <EntityType Name="RecipeIngredient">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RecipeId" Type="int" Nullable="false" />
+          <Property Name="IngredientId" Type="int" Nullable="false" />
+          <Property Name="IngredientServSize" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="IngredientServType" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Recipes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Category" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PrepTimeHour" Type="int" Nullable="false" />
+          <Property Name="PrepTimeMinute" Type="int" Nullable="false" />
+          <Property Name="CookTimeHour" Type="int" Nullable="false" />
+          <Property Name="CookTimeMinute" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserProfile">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Age" Type="int" Nullable="false" />
+          <Property Name="DOB" Type="date" Nullable="false" />
+          <Property Name="Weight" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Table_ToTable">
+          <End Role="Recipes" Type="Self.Recipes" Multiplicity="1" />
+          <End Role="RecipeIngredient" Type="Self.RecipeIngredient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Recipes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RecipeIngredient">
+              <PropertyRef Name="RecipeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_ToTable_1">
+          <End Role="Ingredients" Type="Self.Ingredients" Multiplicity="1" />
+          <End Role="RecipeIngredient" Type="Self.RecipeIngredient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ingredients">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RecipeIngredient">
+              <PropertyRef Name="IngredientId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="NutritionFitnessModelStoreContainer">
+          <EntitySet Name="Activities" EntityType="Self.Activities" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Daily" EntityType="Self.Daily" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ingredients" EntityType="Self.Ingredients" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MET" EntityType="Self.MET" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RecipeIngredient" EntityType="Self.RecipeIngredient" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Recipes" EntityType="Self.Recipes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserProfile" EntityType="Self.UserProfile" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Table_ToTable" Association="Self.FK_Table_ToTable">
+            <End Role="Recipes" EntitySet="Recipes" />
+            <End Role="RecipeIngredient" EntitySet="RecipeIngredient" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_ToTable_1" Association="Self.FK_Table_ToTable_1">
+            <End Role="Ingredients" EntitySet="Ingredients" />
+            <End Role="RecipeIngredient" EntitySet="RecipeIngredient" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NutritionFitnessModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Ingredient">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ServingSize" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="Calories" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="CaloriesFromFat" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="TotalFat" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="SatFat" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="PolyUnSatFat" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="MonoUnSatFat" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="Potassium" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="Carbohydrates" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="DietaryFiber" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="Sugar" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="Protein" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="VitaminA" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="VitaminC" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="Calcium" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="Iron" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="VitaminD" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="VitaminB6" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="VitaminB12" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="Magnesium" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="GlutenFree" Type="Boolean" Nullable="false" />
+          <Property Name="NightshadeFree" Type="Boolean" Nullable="false" />
+          <Property Name="PeanutFree" Type="Boolean" Nullable="false" />
+          <Property Name="TreeNutFree" Type="Boolean" Nullable="false" />
+          <Property Name="DairyFree" Type="Boolean" Nullable="false" />
+          <Property Name="EggFree" Type="Boolean" Nullable="false" />
+          <Property Name="Vegetarian" Type="Boolean" Nullable="false" />
+          <Property Name="Vegan" Type="Boolean" Nullable="false" />
+          <Property Name="Sodium" Type="Decimal" Nullable="false" Precision="5" Scale="2" />
+          <Property Name="Cholesterol" Type="Decimal" Nullable="false" Precision="5" Scale="2" />
+          <Property Name="SoyFree" Type="Boolean" Nullable="false" />
+          <Property Name="ServingType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="RecipeIngredients" Relationship="NutritionFitnessModel.FK_Table_ToTable_1" FromRole="Ingredient" ToRole="RecipeIngredient" />
+        </EntityType>
+        <EntityContainer Name="NutritionFitnessEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Ingredients" EntityType="Self.Ingredient" />
+          <EntitySet Name="METs" EntityType="NutritionFitnessModel.MET" />
+          <EntitySet Name="Activities" EntityType="NutritionFitnessModel.Activity" />
+          <EntitySet Name="UserProfiles" EntityType="NutritionFitnessModel.UserProfile" />
+          <EntitySet Name="RecipeIngredients" EntityType="NutritionFitnessModel.RecipeIngredient" />
+          <EntitySet Name="Recipes" EntityType="NutritionFitnessModel.Recipe" />
+          <AssociationSet Name="FK_Table_ToTable_1" Association="NutritionFitnessModel.FK_Table_ToTable_1">
+            <End Role="Ingredient" EntitySet="Ingredients" />
+            <End Role="RecipeIngredient" EntitySet="RecipeIngredients" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_ToTable" Association="NutritionFitnessModel.FK_Table_ToTable">
+            <End Role="Recipe" EntitySet="Recipes" />
+            <End Role="RecipeIngredient" EntitySet="RecipeIngredients" />
+          </AssociationSet>
+          <EntitySet Name="Dailies" EntityType="NutritionFitnessModel.Daily" />
+        </EntityContainer>
+        <EntityType Name="MET">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MajorCategory" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="GeneralCategory" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="SpecificActivity" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="MET1" Type="Decimal" Precision="15" Scale="2" />
+        </EntityType>
+        <EntityType Name="Activity">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MajorCategory" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="GeneralCategory" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="SpecificActivity" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="MET" Type="Decimal" Precision="15" Scale="2" />
+        </EntityType>
+        <EntityType Name="UserProfile">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Age" Type="Int32" Nullable="false" />
+          <Property Name="DOB" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Weight" Type="Decimal" Nullable="false" Precision="5" Scale="2" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="RecipeIngredient">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RecipeId" Type="Int32" Nullable="false" />
+          <Property Name="IngredientId" Type="Int32" Nullable="false" />
+          <Property Name="IngredientServSize" Type="Decimal" Nullable="false" Precision="8" Scale="2" />
+          <Property Name="IngredientServType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Ingredient" Relationship="NutritionFitnessModel.FK_Table_ToTable_1" FromRole="RecipeIngredient" ToRole="Ingredient" />
+          <NavigationProperty Name="Recipe" Relationship="NutritionFitnessModel.FK_Table_ToTable" FromRole="RecipeIngredient" ToRole="Recipe" />
+        </EntityType>
+        <EntityType Name="Recipe">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Category" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PrepTimeHour" Type="Int32" Nullable="false" />
+          <Property Name="PrepTimeMinute" Type="Int32" Nullable="false" />
+          <Property Name="CookTimeHour" Type="Int32" Nullable="false" />
+          <Property Name="CookTimeMinute" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="RecipeIngredients" Relationship="NutritionFitnessModel.FK_Table_ToTable" FromRole="Recipe" ToRole="RecipeIngredient" />
+        </EntityType>
+        <Association Name="FK_Table_ToTable_1">
+          <End Type="NutritionFitnessModel.Ingredient" Role="Ingredient" Multiplicity="1" />
+          <End Type="NutritionFitnessModel.RecipeIngredient" Role="RecipeIngredient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ingredient">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RecipeIngredient">
+              <PropertyRef Name="IngredientId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_ToTable">
+          <End Type="NutritionFitnessModel.Recipe" Role="Recipe" Multiplicity="1" />
+          <End Type="NutritionFitnessModel.RecipeIngredient" Role="RecipeIngredient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Recipe">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RecipeIngredient">
+              <PropertyRef Name="RecipeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Daily">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="User" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CalorieBurn" Type="Decimal" Precision="8" Scale="2" />
+          <Property Name="Food" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CalorieIntake" Type="Decimal" Precision="8" Scale="2" />
+          <Property Name="BloodPressure" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="RestingHR" Type="Int32" />
+          <Property Name="BloodSugar" Type="Int32" />
+          <Property Name="SelectedDateTime" Type="DateTime" Precision="3" />
+          <Property Name="SelectedActivity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NutritionFitnessModelStoreContainer" CdmEntityContainer="NutritionFitnessEntities">
+          <EntitySetMapping Name="Ingredients">
+            <EntityTypeMapping TypeName="NutritionFitnessModel.Ingredient">
+              <MappingFragment StoreEntitySet="Ingredients">
+                <ScalarProperty Name="ServingType" ColumnName="ServingType" />
+                <ScalarProperty Name="SoyFree" ColumnName="SoyFree" />
+                <ScalarProperty Name="Cholesterol" ColumnName="Cholesterol" />
+                <ScalarProperty Name="Sodium" ColumnName="Sodium" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ServingSize" ColumnName="ServingSize" />
+                <ScalarProperty Name="Calories" ColumnName="Calories" />
+                <ScalarProperty Name="CaloriesFromFat" ColumnName="CaloriesFromFat" />
+                <ScalarProperty Name="TotalFat" ColumnName="TotalFat" />
+                <ScalarProperty Name="SatFat" ColumnName="SatFat" />
+                <ScalarProperty Name="PolyUnSatFat" ColumnName="PolyUnSatFat" />
+                <ScalarProperty Name="MonoUnSatFat" ColumnName="MonoUnSatFat" />
+                <ScalarProperty Name="Potassium" ColumnName="Potassium" />
+                <ScalarProperty Name="Carbohydrates" ColumnName="Carbohydrates" />
+                <ScalarProperty Name="DietaryFiber" ColumnName="DietaryFiber" />
+                <ScalarProperty Name="Sugar" ColumnName="Sugar" />
+                <ScalarProperty Name="Protein" ColumnName="Protein" />
+                <ScalarProperty Name="VitaminA" ColumnName="VitaminA" />
+                <ScalarProperty Name="VitaminC" ColumnName="VitaminC" />
+                <ScalarProperty Name="Calcium" ColumnName="Calcium" />
+                <ScalarProperty Name="Iron" ColumnName="Iron" />
+                <ScalarProperty Name="VitaminD" ColumnName="VitaminD" />
+                <ScalarProperty Name="VitaminB6" ColumnName="VitaminB6" />
+                <ScalarProperty Name="VitaminB12" ColumnName="VitaminB12" />
+                <ScalarProperty Name="Magnesium" ColumnName="Magnesium" />
+                <ScalarProperty Name="GlutenFree" ColumnName="GlutenFree" />
+                <ScalarProperty Name="NightshadeFree" ColumnName="NightshadeFree" />
+                <ScalarProperty Name="PeanutFree" ColumnName="PeanutFree" />
+                <ScalarProperty Name="TreeNutFree" ColumnName="TreeNutFree" />
+                <ScalarProperty Name="DairyFree" ColumnName="DairyFree" />
+                <ScalarProperty Name="EggFree" ColumnName="EggFree" />
+                <ScalarProperty Name="Vegetarian" ColumnName="Vegetarian" />
+                <ScalarProperty Name="Vegan" ColumnName="Vegan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="METs">
+            <EntityTypeMapping TypeName="NutritionFitnessModel.MET">
+              <MappingFragment StoreEntitySet="MET">
+                <ScalarProperty Name="MET1" ColumnName="MET" />
+                <ScalarProperty Name="SpecificActivity" ColumnName="SpecificActivity" />
+                <ScalarProperty Name="GeneralCategory" ColumnName="GeneralCategory" />
+                <ScalarProperty Name="MajorCategory" ColumnName="MajorCategory" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Activities">
+            <EntityTypeMapping TypeName="NutritionFitnessModel.Activity">
+              <MappingFragment StoreEntitySet="Activities">
+                <ScalarProperty Name="MET" ColumnName="MET" />
+                <ScalarProperty Name="SpecificActivity" ColumnName="SpecificActivity" />
+                <ScalarProperty Name="GeneralCategory" ColumnName="GeneralCategory" />
+                <ScalarProperty Name="MajorCategory" ColumnName="MajorCategory" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserProfiles">
+            <EntityTypeMapping TypeName="NutritionFitnessModel.UserProfile">
+              <MappingFragment StoreEntitySet="UserProfile">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RecipeIngredients">
+            <EntityTypeMapping TypeName="NutritionFitnessModel.RecipeIngredient">
+              <MappingFragment StoreEntitySet="RecipeIngredient">
+                <ScalarProperty Name="IngredientServType" ColumnName="IngredientServType" />
+                <ScalarProperty Name="IngredientServSize" ColumnName="IngredientServSize" />
+                <ScalarProperty Name="IngredientId" ColumnName="IngredientId" />
+                <ScalarProperty Name="RecipeId" ColumnName="RecipeId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Recipes">
+            <EntityTypeMapping TypeName="NutritionFitnessModel.Recipe">
+              <MappingFragment StoreEntitySet="Recipes">
+                <ScalarProperty Name="CookTimeMinute" ColumnName="CookTimeMinute" />
+                <ScalarProperty Name="CookTimeHour" ColumnName="CookTimeHour" />
+                <ScalarProperty Name="PrepTimeMinute" ColumnName="PrepTimeMinute" />
+                <ScalarProperty Name="PrepTimeHour" ColumnName="PrepTimeHour" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Dailies">
+            <EntityTypeMapping TypeName="NutritionFitnessModel.Daily">
+              <MappingFragment StoreEntitySet="Daily">
+                <ScalarProperty Name="SelectedActivity" ColumnName="SelectedActivity" />
+                <ScalarProperty Name="SelectedDateTime" ColumnName="SelectedDateTime" />
+                <ScalarProperty Name="BloodSugar" ColumnName="BloodSugar" />
+                <ScalarProperty Name="RestingHR" ColumnName="RestingHR" />
+                <ScalarProperty Name="BloodPressure" ColumnName="BloodPressure" />
+                <ScalarProperty Name="CalorieIntake" ColumnName="CalorieIntake" />
+                <ScalarProperty Name="Food" ColumnName="Food" />
+                <ScalarProperty Name="CalorieBurn" ColumnName="CalorieBurn" />
+                <ScalarProperty Name="User" ColumnName="User" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
